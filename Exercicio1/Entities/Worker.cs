@@ -41,7 +41,7 @@ namespace Exemplo1.Entities
                     sum += contract.TotalValue();
             }
 
-
+            return sum;
         }
     }
 }
