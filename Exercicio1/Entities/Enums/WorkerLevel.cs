@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Exemplo1.Entities.Enums
+﻿namespace Exemplo1.Entities.Enums
 {
     enum WorkerLevel : int
     {
