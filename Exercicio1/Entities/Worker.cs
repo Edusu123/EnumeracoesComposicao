@@ -9,11 +9,11 @@ namespace Exemplo1.Entities
         public double BaseSalary { get; set; }
         public WorkerLevel Level { get; set; }
         public Department Department { get; set; }
-        public List<HourContract> Contracts { get; set; } = new List<HourContract>();
+        public List<HourContract> Contracts { get; private set; } = new List<HourContract>();
 
         public Worker() { }
 
-        public Worker(string name, double baseSalary, WorkerLevel level, Department department)
+        public Worker(string name, WorkerLevel level, double baseSalary, Department department)
         {
             Name = name;
             BaseSalary = baseSalary;
@@ -31,14 +31,16 @@ namespace Exemplo1.Entities
             Contracts.Remove(contract);
         }
 
-        public double Income(int year, int month)
+        public double Income(int month, int year)
         {
             double sum = BaseSalary;
 
-            foreach(HourContract contract in Contracts)
+            foreach (HourContract contract in Contracts)
             {
                 if (contract.Date.Year == year && contract.Date.Month == month)
+                {
                     sum += contract.TotalValue();
+                }
             }
 
             return sum;
