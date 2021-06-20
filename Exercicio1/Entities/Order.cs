@@ -20,6 +20,11 @@ namespace Exercicio1.Entities
 
         public Order() { }
 
+        public Order(Client client)
+        {
+            Client = client;
+        }
+
         public Order(DateTime moment, OrderStatus orderStatus, List<OrderItem> orderItems, Client client)
         {
             Moment = moment;
