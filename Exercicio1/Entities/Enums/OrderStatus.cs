@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Exercicio1.Entities.Enums
+﻿namespace Exercicio1.Entities.Enums
 {
     enum OrderStatus
     {
