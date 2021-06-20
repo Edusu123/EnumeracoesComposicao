@@ -12,6 +12,7 @@ namespace Exercicio1.Entities
         public DateTime Moment { get; set; }
         public OrderStatus OrderStatus { get; set; }
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+        public Client Client { get; set; } = new Client();
 
         #endregion
 
@@ -19,10 +20,12 @@ namespace Exercicio1.Entities
 
         public Order() { }
 
-        public Order(DateTime moment, OrderStatus orderStatus)
+        public Order(DateTime moment, OrderStatus orderStatus, List<OrderItem> orderItems, Client client)
         {
             Moment = moment;
             OrderStatus = orderStatus;
+            OrderItems = orderItems;
+            Client = client;
         }
 
         #endregion
