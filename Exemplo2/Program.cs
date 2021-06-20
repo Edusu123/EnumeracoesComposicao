@@ -38,6 +38,9 @@ namespace Exemplo2
                 Likes = 5,
                 Comments = commentsPost2
             };
+
+            Console.WriteLine(p1);
+            Console.WriteLine(p2);
         }
     }
 }
