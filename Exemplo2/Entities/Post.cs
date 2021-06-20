@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Exemplo2.Entities
 {
@@ -29,6 +30,23 @@ namespace Exemplo2.Entities
         public void RemoveComment(Comment comment)
         {
             Comments.Remove(comment);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine(Title);
+            sb.AppendLine($"{Likes} likes - {Moment.ToString("dd/MM/yyyyy HH:mm:ss")}");
+            sb.AppendLine(Content);
+            sb.AppendLine("Comments: ");
+            
+            foreach(Comment c in Comments)
+            {
+                sb.AppendLine(c.Text);
+            }
+
+            return sb.ToString();
         }
     }
 }
