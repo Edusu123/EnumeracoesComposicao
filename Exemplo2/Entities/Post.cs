@@ -8,7 +8,7 @@ namespace Exemplo2.Entities
         public DateTime Moment { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public int Like { get; set; }
+        public int Likes { get; set; }
         public List<Comment> Comments { get; set; } = new List<Comment>();
 
         public Post() { }
@@ -18,7 +18,7 @@ namespace Exemplo2.Entities
             Moment = moment;
             Title = title;
             Content = content;
-            Like = liket;
+            Likes = liket;
         }
 
         public void AddComment(Comment comment)
