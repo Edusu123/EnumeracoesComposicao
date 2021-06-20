@@ -62,7 +62,7 @@ namespace Exemplo1
 
             Console.WriteLine($"Name {worker.Name}");
             Console.WriteLine($"Department: {worker.Department.Name}");
-            Console.WriteLine($"Income for {monthAndYear}: {worker.Income(month, year)}");
+            Console.WriteLine($"Income for {monthAndYear}: {worker.Income(month, year).ToString("F2", CultureInfo.InvariantCulture)}");
         }
     }
 }
